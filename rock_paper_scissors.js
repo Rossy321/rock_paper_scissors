@@ -23,6 +23,8 @@ function getHumanChoice() {
 
 }
 
+let humanScore = 0;
+let computeScore = 0; 
 
 
 
