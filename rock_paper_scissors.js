@@ -27,6 +27,37 @@ let humanScore = 0;
 let computeScore = 0; 
 
 
+function playRound(humanChoice, computerChoice) {
+    if (humanChoice === computerChoice)
+        return "it's a draw";
+    else if (humanChoice === rock && computerChoice === scissors)
+        return "human wins";
+    else if (humanChoice === rock && computerChoice === paper)
+        return "computer wins";
+    else if (humanChoice === scissors && computerChoice === rock) 
+        return "computer wins" 
+    else if (humanChoice === scissors && computerChoice === paper)
+        return "human wins";
+    else if (humanChoice === paper && computerChoice === rock)
+        return "human wins";
+    else if (humanCHoice === paper && computerChoice === scissors)
+        return "computer wins"  
+}
+
+
+
+    
+    
+}
+
+fucntion keepScore {
+    if playRound = "it's a draw" 
+}
+
+const humanSelection = getHumanChoice();
+const computerSelection = getComputerChoice();
+
+
 
 
 
