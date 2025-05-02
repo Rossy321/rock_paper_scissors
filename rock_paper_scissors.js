@@ -86,10 +86,25 @@ function playGame() {
 }
 
 
+const rockButton = document.createElement("button");
+const paperButton = document.createElement("button");
+const scissorsButton = document.createElement("button");
 
+let result;
+rockButton.addEventListener("click", () => { 
+   result = playRound("rock", getComputerChoice())
+   console.log(result);
+});
 
+paperButton.addEventListener("click", () => {
+    result = playRound("paper", getComputerChoice())
+    console.log(result);
+}
 
-
+scissorsButton.addEventListener("click", () => {
+    result = playRound("scissors", getComputerChoice())
+    console.log(result);
+}
 
 
 
