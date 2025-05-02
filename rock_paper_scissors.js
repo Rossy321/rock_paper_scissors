@@ -90,21 +90,28 @@ const rockButton = document.createElement("button");
 const paperButton = document.createElement("button");
 const scissorsButton = document.createElement("button");
 
+const body = document.querySelector("body");
+const div = document.createElement("div");
+body.appendChild(div);
+
+
 let result;
 rockButton.addEventListener("click", () => { 
    result = playRound("rock", getComputerChoice())
-   console.log(result);
+    div.innerText = result;
 });
 
 paperButton.addEventListener("click", () => {
     result = playRound("paper", getComputerChoice())
-    console.log(result);
-}
+    div.innerText = result;
+});
 
 scissorsButton.addEventListener("click", () => {
     result = playRound("scissors", getComputerChoice())
-    console.log(result);
-}
+    div.innerText = result;
+});
+
+
 
 
 
