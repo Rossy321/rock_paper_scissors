@@ -111,72 +111,9 @@ body.appendChild(computerScoreDiv);
 let humanScore = 0;
 let computerScore = 0;
 let result;
-rockButton.addEventListener("click", () => { 
-   result = playRound("rock", getComputerChoice())
-    div.innerText = result;
-    if (result === "human wins" ) {
-        humanScore += 1;
-        humanScoreDiv.textContent = humanScore;
-    }
-    
-    else if (result === "computer wins") {
-        computerScore += 1;
-        computerScoreDiv.textContent = computerScore;
-    };
-    
- 
-    if (computerScore === 5) {
-        alert("computer wins!");
-        humanScore = 0;
-        computerScore = 0;
-        humanScoreDiv.textContent = humanScore;
-        computerScoreDiv.textContent = computerScore;
-    }
-    
-    else if (humanScore === 5) {
-        alert("human wins!");
-        humanScore = 0;
-        computerScore = 0;
-        humanScoreDiv.textContent = humanScore;
-        computerScoreDiv.textContent = computerScore;
-    };
 
-})
-
-
-paperButton.addEventListener("click", () => {
-    result = playRound("paper", getComputerChoice())
-    div.innerText = result;
-    if (result === "human wins" ) {
-        humanScore += 1;
-        humanScoreDiv.textContent = humanScore;
-    }
-    
-    else if (result === "computer wins") {
-        computerScore += 1;
-        computerScoreDiv.textContent = computerScore;
-    };
-
-    if (computerScore === 5) {
-        alert("computer wins!");
-        humanScore = 0;
-        computerScore = 0;
-        humanScoreDiv.textContent = humanScore;
-        computerScoreDiv.textContent = computerScore;
-    }
-    
-    else if (humanScore === 5) {
-        alert("human wins!");
-        humanScore = 0;
-        computerScore = 0;
-        humanScoreDiv.textContent = humanScore;
-        computerScoreDiv.textContent = computerScore;
-    };
-});
-
-
-scissorsButton.addEventListener("click", () => {
-    result = playRound("scissors", getComputerChoice())
+let handleMove = (button) => {
+    result = playRound(button, getComputerChoice())
     div.innerText = result;
        if (result === "human wins" ) {
         humanScore += 1;
@@ -186,7 +123,7 @@ scissorsButton.addEventListener("click", () => {
     else if (result === "computer wins") {
         computerScore += 1;
         computerScoreDiv.textContent = computerScore;
-    }; 
+    } 
 
     if (computerScore === 5) {
         alert("computer wins!");
@@ -202,8 +139,18 @@ scissorsButton.addEventListener("click", () => {
         computerScore = 0;
         humanScoreDiv.textContent = humanScore;
         computerScoreDiv.textContent = computerScore;
-    };
-});
+    }
+};
+rockButton.addEventListener("click", () => handleMove ("rock"));
+paperButton.addEventListener("click", () => handleMove ("paper"));
+scissorsButton.addEventListener("click", () => handleMove ("scissors"));
+
+
+
+
+
+    
+
 
 
 
