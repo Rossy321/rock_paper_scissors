@@ -117,12 +117,12 @@ let handleMove = (button) => {
     div.innerText = result;
        if (result === "human wins" ) {
         humanScore += 1;
-        humanScoreDiv.textContent = humanScore;
+        humanScoreDiv.textContent = `human score is ${humanScore}`;
     }
     
     else if (result === "computer wins") {
         computerScore += 1;
-        computerScoreDiv.textContent = computerScore;
+        computerScoreDiv.textContent = `computer score is ${computerScore}`;
     } 
 
     if (computerScore === 5) {
@@ -144,25 +144,3 @@ let handleMove = (button) => {
 rockButton.addEventListener("click", () => handleMove ("rock"));
 paperButton.addEventListener("click", () => handleMove ("paper"));
 scissorsButton.addEventListener("click", () => handleMove ("scissors"));
-
-
-
-
-
-    
-
-
-
-
-
-    
-
-
-
-
-
-
-
-
-
-
