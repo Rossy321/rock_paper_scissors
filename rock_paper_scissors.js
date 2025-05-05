@@ -113,7 +113,7 @@ let computerScore = 0;
 let result;
 
 let handleMove = (button) => {
-    result = playRound(button, getComputerChoice())
+    result = playRoundOutput(button, getComputerChoice())
     div.innerText = result;
        if (result === "human wins" ) {
         humanScore += 1;
